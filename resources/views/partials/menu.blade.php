@@ -18,10 +18,10 @@
             <a href="{{ route('book.create') }}">Registrar libro</a>
         </li>
         <li>
-            <a href="{{ route('books') }}">Libros prestados</a>
+            <a href="{{ route('borrowed.books') }}">Libros prestados</a>
         </li>
         <li>
-            <a href="{{ route('books') }}">Registrar categorías</a>
+            <a href="{{ route('categories') }}">Registrar categorías</a>
         </li>
         <li>
             <a href="{{ route('books') }}">Lectores</a>

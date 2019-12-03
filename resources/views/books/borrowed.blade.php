@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <p>libros</p>
+    <p>libros prestados</p>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -48,6 +48,6 @@
             </thead>
         </table>
         <br>
-        {{ $books->links() }}
+        {{-- {{ $books->links() }} --}}
     @endempty
 @endsection

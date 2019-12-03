@@ -23,3 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/books', 'BooksController@index')->name('books');
 Route::get('/book/create', 'BooksController@create')->name('book.create');
 Route::post('/book/store', 'BooksController@store')->name('book.store');
+Route::put('/book/lend/{id}', 'BooksController@lend')->name('book.lend');
+Route::get('/books/borrowed', 'BooksController@borrowed')->name('borrowed.books');
+
+//categories
+Route::get('categories', 'CategoriesController@index')->name('categories');
