@@ -24,10 +24,10 @@
             <a href="{{ route('categories') }}">Registrar categorías</a>
         </li>
         <li>
-            <a href="{{ route('books') }}">Lectores</a>
+            <a href="{{ route('users') }}">Lectores</a>
         </li>
         <li>
-            <a href="{{ route('books') }}">Registrar lectores</a>
+            <a href="{{ route('user.create') }}">Registrar lectores</a>
         </li>
         <li>
             <div>

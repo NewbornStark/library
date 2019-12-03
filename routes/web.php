@@ -27,4 +27,9 @@ Route::put('/book/lend/{id}', 'BooksController@lend')->name('book.lend');
 Route::get('/books/borrowed', 'BooksController@borrowed')->name('borrowed.books');
 
 //categories
-Route::get('categories', 'CategoriesController@index')->name('categories');
+Route::get('/categories', 'CategoriesController@index')->name('categories');
+
+//users
+Route::get('/users', 'UsersController@index')->name('users');
+Route::get('/user/create', 'UsersController@create')->name('user.create');
+Route::post('/user/store', 'UsersController@store')->name('user.store');

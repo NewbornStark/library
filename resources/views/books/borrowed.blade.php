@@ -21,27 +21,20 @@
                 <tr>
                     <th>Author</th>
                     <th>Titulo</th>
-                    <th>Descripción</th>
-                    <th>Fecha de publicación</th>
+                    <th>Prestado a</th>
+                    <th>Fecha de prestamo</th>
+                    <th>Fecha de devolución</th>
                     <th>Acciones</th>
                 </tr>
                 @foreach ($books as $book)
                     <tr>
                         <td>{{ $book->author }}</td>
                         <td>{{ $book->title }}</td>
-                        <td>{{ $book->description }}</td>
-                        <td>{{ $book->published }}</td>
+                        <td>{{ $book->name }} <br> {{ $book->email }}</td>
+                        <td>{{ $book->loan_date }}</td>
+                        <td>{{ $book->return_date }}</td>
                         <td>
-                            <a href="javascript:void(0);" onclick="
-                                document.querySelector('#frmLendBook{{$book->id}}').submit()
-                            ">Prestar</a>
-                            <form id="frmLendBook{{$book->id}}" style="display:none;"
-                                action="{{ route('book.lend', $book->id) }}" method="POST">
-                                @method('PUT')
-                                @csrf
-                                <input type="hidden" name="return_date"
-                                    value="2020-01-01 12:00:00">
-                            </form>
+                            acciones
                         </td>
                     </tr>
                 @endforeach

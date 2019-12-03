@@ -72,10 +72,12 @@ class BooksController extends Controller
 
     public function borrowed()
     {
-        $books = BorrowedBooks::where('status', 1)
-            ->orderBy('loan_date')
+        $books = BorrowedBooks::where('borrowed_books.status', 1)
+            ->orderBy('borrowed_books.loan_date')
+            ->select('borrowed_books.*', 'books.author', 'books.title', 'users.name', 'users.email')
+            ->leftJoin('users', 'borrowed_books.id_user', '=', 'users.id')
+            ->leftJoin('books', 'borrowed_books.id_book', '=', 'books.id')
             ->get();
-        return $books;
         return view('books.borrowed', compact('books'));
     }
 }
