@@ -28,6 +28,11 @@ Route::get('/books/borrowed', 'BooksController@borrowed')->name('borrowed.books'
 
 //categories
 Route::get('/categories', 'CategoriesController@index')->name('categories');
+Route::get('/category/create', 'CategoriesController@create')->name('category.create');
+Route::post('/category/store', 'CategoriesController@store')->name('category.store');
+Route::get('/category/edit/{id}', 'CategoriesController@edit')->name('category.edit');
+Route::get('/category/isRelated/{id?}', 'CategoriesController@isRelatedToBook')->name('category.isRelated');
+Route::delete('/category/delete/{id?}', 'CategoriesController@delete')->name('category.delete');
 
 //users
 Route::get('/users', 'UsersController@index')->name('users');

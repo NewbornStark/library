@@ -21,7 +21,10 @@
             <a href="{{ route('borrowed.books') }}">Libros prestados</a>
         </li>
         <li>
-            <a href="{{ route('categories') }}">Registrar categorías</a>
+            <a href="{{ route('categories') }}">Categorías</a>
+        </li>
+        <li>
+            <a href="{{ route('category.create') }}">Registrar categorías</a>
         </li>
         <li>
             <a href="{{ route('users') }}">Lectores</a>

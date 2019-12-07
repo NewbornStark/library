@@ -21,5 +21,6 @@
     <main>
         @yield('content')
     </main>
+    @yield('pageScripts')
 </body>
 </html>
